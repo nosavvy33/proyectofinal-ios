@@ -135,7 +135,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="No tienes una cuenta?"/>
                                 <connections>
-                                    <segue destination="rSP-co-M1b" kind="show" id="Png-sZ-yeg"/>
+                                    <segue destination="rSP-co-M1b" kind="show" id="HMk-H4-sBv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZT-qQ-euc">
@@ -199,13 +199,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yGB-Kd-jRf">
-                                <rect key="frame" x="77" y="213.5" width="200" height="30"/>
+                                <rect key="frame" x="87.5" y="213.5" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="3zt-Zq-KuX"/>
                                     <constraint firstAttribute="width" constant="200" id="wor-te-Bev"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contrasena" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASr-4m-YHv">
@@ -216,6 +217,7 @@
                                     <constraint firstAttribute="width" constant="200" id="aUE-1J-qtm"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contrasena" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8j-Wo-B6E">
@@ -226,6 +228,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ElA-VJ-u3v"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvI-Eb-Oli">
@@ -237,6 +240,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="titleShadowOffset" width="4" height="4"/>
                                 <state key="normal" title="Crear cuenta"/>
+                                <connections>
+                                    <action selector="crearCuentaTapped:" destination="rSP-co-M1b" eventType="touchUpInside" id="M1H-lr-PD5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyN-nP-WEQ">
                                 <rect key="frame" x="87.5" y="434" width="200" height="30"/>
@@ -247,6 +253,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="titleShadowOffset" width="4" height="4"/>
                                 <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelarTapped:" destination="rSP-co-M1b" eventType="touchUpInside" id="eeO-PN-etP"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pill_white" translatesAutoresizingMaskIntoConstraints="NO" id="mZd-s4-HxA">
                                 <rect key="frame" x="74" y="96" width="70" height="70"/>
@@ -281,7 +290,10 @@
                         <viewLayoutGuide key="safeArea" id="M9e-md-Jub"/>
                     </view>
                     <connections>
-                        <segue destination="aln-BD-ZAe" kind="show" identifier="resultregistro" id="zRy-e4-MER"/>
+                        <outlet property="newPasswordConfirmInput" destination="m8j-Wo-B6E" id="4Ih-ia-faR"/>
+                        <outlet property="newPasswordInput" destination="ASr-4m-YHv" id="S6p-tJ-Fry"/>
+                        <outlet property="newUsernameInput" destination="yGB-Kd-jRf" id="jfu-Jb-cuK"/>
+                        <segue destination="aln-BD-ZAe" kind="show" identifier="resultregister" id="zRy-e4-MER"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTE-HT-WQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
