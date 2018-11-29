@@ -1,0 +1,6 @@
+framework module Pods_MiDoc {
+  umbrella header "Pods-MiDoc-umbrella.h"
+
+  export *
+  module * { export * }
+}
