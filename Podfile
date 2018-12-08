@@ -9,4 +9,5 @@ target 'MiDoc' do
 pod 'Firebase'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod "DropDown"
 end
