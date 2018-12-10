@@ -10,4 +10,5 @@ pod 'Firebase'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod "DropDown"
+pod 'Alamofire', '~> 4.7'
 end
